@@ -1,0 +1,279 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.fielder-validation-error {
+    color: #e01d1d;
+}
+.close-alert {
+    position:absolute;
+    right:-10px;
+    top:-15px;
+    border-radius:15px;
+    width:30px;
+    height:31px;
+}
+
+/* Estilo para o corpo da página */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: center;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo para o contêiner do formulário */
+form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Estilo para os rótulos */
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo para os campos de entrada */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo para parágrafos */
+p {
+    font-size: 16px; /* Tamanho da fonte padrão */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+
+/* Estilo para o botão de entrada */
+.btnLogin {
+    background: linear-gradient(to bottom, #333, #999); /* Degradê de cinza */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+/* Estilo para um botão com classes .btn, .btn-secondary e .btn-block */
+.btn.btn-secondary.btn-block {
+    background-color: #e01d1d; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+    /* Estilo para o botão ao passar o mouse */
+    .btn.btn-secondary.btn-block:hover {
+        background-color: #545b62; /* Cor de fundo do botão ao passar o mouse */
+    }
+
+
+    .btn-primary:hover {
+        background-color: #999;
+    }
+
+/* Estilo para mensagens de erro */
+.validation-message {
+    color: #dc3545;
+    font-size: 12px;
+}
+
+
+/* Seletor para ocultar o footer */
+footer {
+    display: none;
+}
+
+
+/* Estilo para o cabeçalho */
+header {
+    background: linear-gradient(to bottom, #333, #999); /* Degradê de cinza */
+    color: #fff; /* Cor do texto */
+    padding: 20px 0; /* Espaçamento interno */
+}
+
+/* Estilo para a barra de navegação */
+nav {
+    background-color: transparent; /* Fundo transparente */
+    border: none;
+    box-shadow: none;
+}
+
+/* Estilo para o logotipo do site (ajuste o seletor conforme necessário) */
+.navbar-brand {
+    color: #fff; /* Cor do logotipo */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bold;
+}
+
+/* Estilo para os links de navegação (ajuste o seletor conforme necessário) */
+.nav-link {
+    color: #fff; /* Cor dos links de navegação */
+    margin: 0 10px;
+    transition: color 0.3s; /* Efeito de transição ao passar o mouse */
+}
+
+    /* Estilo para os links de navegação ao passar o mouse */
+    .nav-link:hover {
+        color: #f0f0f0; /* Cor dos links ao passar o mouse */
+    }
+
+/* Estilo para o menu suspenso (dropdown) se necessário */
+.dropdown-menu {
+    background: linear-gradient(to bottom, #333, #999); /* Degradê de cinza para o menu suspenso */
+    color: #fff;
+}
+
+/* Estilo para o botão do menu suspenso se necessário */
+.navbar-toggler {
+    background-color: #fff;
+    color: #333; /* Cor do botão */
+    border: none;
+}
+
+/* Estilo para o ícone do menu se necessário */
+.navbar-toggler-icon {
+    background-color: #333; /* Cor do ícone */
+}
+
+/* Estilo para a tabela */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+
+    /* Estilo para o cabeçalho da tabela */
+    .table thead {
+        background: linear-gradient(to bottom, #333, #999); /* Degradê de cinza */
+        color: #fff; /* Cor do texto do cabeçalho */
+    }
+
+    /* Estilo para as células do cabeçalho */
+    .table th {
+        padding: 10px;
+        text-align: left;
+    }
+
+    /* Estilo para as células do corpo da tabela */
+    .table td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd; /* Linha inferior de separação */
+    }
+
+    /* Estilo para as linhas pares da tabela */
+    .table tbody tr:nth-child(even) {
+        background-color: #f5f5f5; /* Cor de fundo das linhas pares */
+    }
+
+    /* Estilo para as linhas ímpares da tabela */
+    .table tbody tr:nth-child(odd) {
+        background-color: #fff; /* Cor de fundo das linhas ímpares */
+    }
+
+    /* Estilo para destacar linhas ao passar o mouse */
+    .table tbody tr:hover {
+        background-color: #cce0ff; /* Cor de fundo ao passar o mouse */
+    }
+
+
+.btn-primary {
+    background: linear-gradient(to bottom, #333, #999); /* Degradê de cinza */
+    color: #fff; /* Cor do texto */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Efeito de transição */
+    font-weight: bold;
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+a {
+    color: #007bff; /* Cor padrão do link */
+    text-decoration: none; /* Remove sublinhado padrão */
+    transition: color 0.3s; /* Efeito de transição de cor ao passar o mouse */
+    font-weight: bold; /* Deixa o texto em negrito */
+}
+
+/* Estilo para parágrafos */
+p {
+    font-size: 18px; /* Tamanho da fonte para parágrafos */
+    line-height: 1.6; /* Espaçamento entre linhas para parágrafos */
+    color: #333; /* Cor do texto padrão (tom de cinza) para parágrafos */
+}
+
+/* Estilo para cabeçalhos <h1> */
+h1 {
+    font-size: 32px; /* Tamanho da fonte para cabeçalhos h1 */
+    line-height: 1.2; /* Espaçamento entre linhas para cabeçalhos h1 */
+    color: #666; /* Cor do texto padrão (tom de cinza mais escuro) para cabeçalhos h1 */
+    font-weight: bold; /* Texto em negrito para cabeçalhos h1 */
+}
+
+    /* Estilo para cabeçalhos <h1> ao passar o mouse (opcional) */
+    h1:hover {
+        color: #444; /* Cor do texto para cabeçalhos h1 ao passar o mouse (tom de cinza mais escuro) */
+    }
+
+    /* Estilo para links dentro de parágrafos e cabeçalhos (opcional) */
+    p a, h1 a {
+        color: #007bff; /* Cor dos links dentro de parágrafos e cabeçalhos (cor azul para destaque) */
+        text-decoration: underline; /* Sublinhado dos links */
+    }
+
+        /* Estilo para links dentro de parágrafos e cabeçalhos ao passar o mouse (opcional) */
+        p a:hover, h1 a:hover {
+            color: #0056b3; /* Cor dos links ao passar o mouse (tom de cinza mais escuro) */
+            text-decoration: none; /* Remove o sublinhado ao passar o mouse */
+        }
+
+.destaque {
+    background-color: Whitesmoke; /* Cor de fundo destacada */
+    color: #fff;
+    padding: 20px; /* Espaçamento interno para a caixa de destaque */
+    border-radius: 5px; /* Borda arredondada para a caixa */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar a caixa */
+    margin-top: 10px; /* Margem superior (espaço acima do formulário) */
+    margin-bottom: 10px; /* Margem inferior (espaço abaixo do formulário) */
+}
+

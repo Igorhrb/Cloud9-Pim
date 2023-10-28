@@ -1,0 +1,70 @@
+﻿@model List<DescontosModel>
+@{
+    ViewData["Title"] = "Lista de Usuários";
+}
+<div class="text-center">
+
+    <div class="d-grid gap-2 d-md-flex justify-context-md-start">
+        <a class="btn btn-primary" role="button" asp-controller="FolhaPagamento" asp-action="Criar"> Criar Nova Folha </a>
+    </div>
+    <br />
+    <h1>@ViewData["Title"]</h1>
+    <br />
+    <br />
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+            @TempData["MensagemSucesso"]
+        </div>
+    }
+
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
+            @TempData["MensagemErro"]
+        </div>
+    }
+    <br />
+
+    <p>Todos os usuarios do sistema da empresa.</p>
+
+
+    <table class="table" id="tabela-usuarios">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Salario</th>
+                <th scope="col">Atrasos</th>
+                <th scope="col">Faltas</th>
+                <th scope="col">HoraExtra</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var usuario in Model)
+                {
+                    <tr>
+
+                        <th scope="row">@usuario.Id_Usuario</th>
+                        <td>@usuario.SalarioBruto</td>
+                        <td>@usuario.Atraso</td>
+                        <td>@usuario.Faltas</td>
+                        <td>@usuario.HoraExtra</td>
+
+                    </tr>
+
+
+
+                }
+            }
+
+        </tbody>
+    </table>
+
+
+
+</div>

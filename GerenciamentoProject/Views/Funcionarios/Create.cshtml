@@ -1,0 +1,93 @@
+﻿@model GerenciamentoProject.Models.FuncionarioModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Adicionar Funcionários</h1>
+
+<h4>Insira os dados para cadastro</h4>
+
+<hr />
+<div class="row">
+
+    <div class="col-md-4">
+        <form asp-controller="Funcionarios" asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.Nome)
+            </div>
+            <div class="form-group">
+                <label asp-for="Endereco" class="control-label"></label>
+                <input asp-for="Endereco" class="form-control" />
+                <span asp-validation-for="Endereco" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.Endereco)
+            </div>
+            <div class="form-group">
+                <label asp-for="CPF" class="control-label"></label>
+                <input asp-for="CPF" class="form-control" />
+                <span asp-validation-for="CPF" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.CPF)
+            </div>
+            <div class="form-group">
+                <label asp-for="Dtnascimento" class="control-label"></label>
+                <input asp-for="Dtnascimento" class="form-control" />
+                <span asp-validation-for="Dtnascimento" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.Dtnascimento)
+            </div>
+            <div class="form-group">
+                <label asp-for="celular" class="control-label"></label>
+                <input asp-for="celular" class="form-control" />
+                <span asp-validation-for="celular" class="text-danger" placeholder="Ex:16996144060"></span>
+                @Html.ValidationMessageFor(x => x.celular)
+            </div>
+          
+            <div class="form-group">
+                <label asp-for="Cargo" class="control-label"></label>
+                <input asp-for="Cargo" class="form-control" />
+                <span asp-validation-for="Cargo" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.Cargo)
+            </div>
+            <div class="form-group">
+                <label asp-for="Sexo" class="control-label"></label>
+                <input asp-for="Sexo" class="form-control" />
+                <span asp-validation-for="Sexo" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.Sexo)
+            </div>
+            <div class="form-group">
+                <label asp-for="ContaBanco" class="control-label"></label>
+                <input asp-for="ContaBanco" class="form-control" />
+                <span asp-validation-for="ContaBanco" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.ContaBanco)
+            </div>
+            <div class="form-group">
+                <label asp-for="PIS" class="control-label"></label>
+                <input asp-for="PIS" class="form-control" />
+                <span asp-validation-for="PIS" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.PIS)
+            </div>
+            <div class="form-group">
+                <label asp-for="Salario" class="control-label"></label>
+                <input asp-for="Salario" class="form-control" />
+                <span asp-validation-for="Salario" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.Salario)
+            </div>
+
+           
+            
+
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Gerente" /> @Html.DisplayNameFor(model => model.Gerente)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            <a asp-area="" asp-controller="Home" asp-action="Index">Voltar</a>
+        </form>
+    </div>
+</div>

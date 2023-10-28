@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Bem vindo à CLOUD9TI";
+}
+
+<div class="text-center">
+    <h1 >Bem-Vindo</h1>
+    <p>Sistema de controle CLOUD9</p>
+
+</div>
+
+<div class="destaque">
+        <p> Em resumo, um software de folha de pagamento automatizado simplifica e agiliza o processo de pagamento dos funcionários, reduzindo erros, economizando tempo e garantindo conformidade com as regulamentações trabalhistas. Isso beneficia tanto a empresa quanto os funcionários, tornando a gestão de recursos humanos mais eficiente e confiável.</p>
+    
+</div>
+
+
+
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+<@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+}

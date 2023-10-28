@@ -1,0 +1,72 @@
+﻿@model GerenciamentoProject.Models.DescontosModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Adicionar os dados da folha </h1>
+
+<h4>Insira os dados da folha</h4>
+
+<hr />
+<div class="row">
+
+    <div class="col-md-4">
+        <form asp-controller="FolhaPagamento" asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SalarioBruto" class="control-label"></label>
+                <input asp-for="SalarioBruto" class="form-control" />
+                <span asp-validation-for="SalarioBruto" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.SalarioBruto)
+            </div>
+            <div class="form-group">
+                <label asp-for="Id_Usuario" class="control-label"></label>
+                <input asp-for="Id_Usuario" class="form-control" />
+                <span asp-validation-for="Id_Usuario" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.Id_Usuario)
+            </div>
+            <div class="form-group">
+                <label asp-for="HoraExtra" class="control-label"></label>
+                <input asp-for="HoraExtra" class="form-control" />
+                <span asp-validation-for="HoraExtra" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.HoraExtra)
+            </div>
+            <div class="form-group">
+                <label asp-for="NomeFuncionario" class="control-label"></label>
+                <input asp-for="NomeFuncionario" class="form-control" />
+                <span asp-validation-for="NomeFuncionario" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.NomeFuncionario)
+            </div>
+            <div class="form-group">
+                <label for="nome" class="form-label">Perfil</label>
+                <select asp-for="Cargo" class="form-control">
+                    <option value="">Selecione</option>
+                    <option value="Admin">Administrador</option>
+                    <option value="Padrao">Produção</option>
+                </select>
+                @Html.ValidationMessageFor(x => x.Cargo)
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="Atraso" class="control-label"></label>
+                <input asp-for="Atraso" class="form-control" />
+                <span asp-validation-for="Atraso" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.Atraso)
+            </div>
+            <div class="form-group">
+                <label asp-for="Faltas" class="control-label"></label>
+                <input asp-for="Faltas" class="form-control" />
+                <span asp-validation-for="Faltas" class="text-danger"></span>
+                @Html.ValidationMessageFor(x => x.Faltas)
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            <a asp-area="" asp-controller="FolhaPagamento" asp-action="Index">Voltar</a>
+        </form>
+    </div>
+</div>
+
+
